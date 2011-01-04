@@ -11,3 +11,5 @@
 [core]
 	safecrlf = true
 	autocrlf = input
+[push]
+	default = tracking
