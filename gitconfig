@@ -1,0 +1,13 @@
+[user]
+	name = Andreas Öman
+	email = andoma@spotify.com
+[branch]
+	autosetuprebase = always
+[color]
+	branch = always
+	diff = always
+	ui = always
+	interactive = always
+[core]
+	safecrlf = true
+	autocrlf = input
