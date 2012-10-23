@@ -13,11 +13,14 @@
 (set-mouse-color "white")
 (which-func-mode t)
 
-(tool-bar-mode -1)
+(if (fboundp 'tool-bar-mode)
+    (tool-bar-mode -1))
+
 (global-font-lock-mode t)
 
 (column-number-mode t)
 (setq scroll-step 1)
+(setq-default indent-tabs-mode nil)
 
 (defun my-c-mode-hook ()
   (interactive)
@@ -30,7 +33,9 @@
 
 
 (setq auto-mode-alist (append '(("\\.gnus$" . lisp-mode)
-				("^[mM]akefile" . makefile-mode))
+				("^[mM]akefile" . makefile-mode)
+				("\\.view$" . js-mode)
+				)
 			      auto-mode-alist))
 
 (add-hook 'c-mode-hook 'my-c-mode-hook)
@@ -61,8 +66,29 @@
  '(inhibit-startup-screen t)
  '(load-home-init-file t t))
 
-(setq load-path (cons (expand-file-name "~andoma/.dotfiles/emacs.d") load-path))
+(setq load-path (cons (expand-file-name "~andoma/dotfiles/emacs.d") load-path))
 (require 'c-style)
 
-(autoload 'javascript-mode "javascript" nil t)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-option-modifier nil
+        mac-command-modifier 'meta
+        x-select-enable-clipboard t
+        default-input-method "MacOSX")
+)
+
+(c-add-style "myc++"
+         '((c-basic-offset . 2)
+           (c-comment-only-line-offset . 0)
+           (c-hanging-braces-alist . ((substatement-open before after)))
+           (c-offsets-alist . ((topmost-intro        . 0)
+                   (topmost-intro-cont   . 0)
+                   (substatement         . 2)
+                   (substatement-open    . 0)
+                   (statement-case-open  . 2)
+                   (statement-cont       . 2)
+                   (access-label         . -2)
+                   (inclass              . 2)
+                   (inline-open          . 2)
+                   (innamespace          . 0)
+                   ))))
