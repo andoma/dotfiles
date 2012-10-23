@@ -21,6 +21,7 @@
 (column-number-mode t)
 (setq scroll-step 1)
 (setq-default indent-tabs-mode nil)
+(setq-default show-trailing-whitespace t)
 
 (defun my-c-mode-hook ()
   (interactive)
