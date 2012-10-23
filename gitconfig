@@ -12,3 +12,5 @@
 	autocrlf = input
 [push]
 	default = tracking
+[merge]
+	conflictstyle = diff3
