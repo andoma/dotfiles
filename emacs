@@ -20,6 +20,7 @@
 
 (column-number-mode t)
 (setq scroll-step 1)
+(setq compilation-scroll-output t)
 (setq-default indent-tabs-mode nil)
 (setq-default show-trailing-whitespace t)
 
