@@ -3,9 +3,9 @@
 [branch]
 	autosetuprebase = always
 [color]
-	branch = always
-	diff = always
-	ui = always
+	branch = true
+	diff = true
+	ui = true
 	interactive = always
 [core]
 	safecrlf = true
