@@ -23,6 +23,7 @@
 (setq compilation-scroll-output t)
 (setq-default indent-tabs-mode nil)
 (setq-default show-trailing-whitespace t)
+(setq-default js-indent-level 2)
 
 (defun my-c-mode-hook ()
   (interactive)
