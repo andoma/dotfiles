@@ -71,6 +71,7 @@
 
 (setq load-path (cons (expand-file-name "~andoma/dotfiles/emacs.d") load-path))
 (require 'c-style)
+(require 'go-mode)
 
 
 (when (eq system-type 'darwin) ;; mac specific settings
