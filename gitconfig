@@ -14,3 +14,5 @@
 	default = tracking
 [merge]
 	conflictstyle = diff3
+[log]
+	decorate = true
