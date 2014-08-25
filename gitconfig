@@ -16,3 +16,5 @@
 	conflictstyle = diff3
 [log]
 	decorate = true
+[diff]
+	submodule = log
