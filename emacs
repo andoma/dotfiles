@@ -9,6 +9,7 @@
 (global-set-key [f11]  'previous-error )
 (global-set-key [f12]  'next-error )
 (which-func-mode t)
+(require 'iso-transl)
 
 (if (fboundp 'tool-bar-mode)
     (tool-bar-mode -1))
