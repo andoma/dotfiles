@@ -150,3 +150,18 @@
 
 
 (global-set-key [f8]   'git-grep )
+
+
+(defun my-switch-c-h ()
+ (interactive)
+ (let* ((name (buffer-file-name)))
+   (if (string-match "\\.c$" name)
+       (progn
+         (setq name (concat (substring name 0 (1- (length name))) "h"))
+         (find-file name))
+     (if (string-match "\\.h$" name)
+         (progn
+           (setq name (concat (substring name 0 (1- (length name))) "c"))
+           (find-file name))))))
+
+(global-set-key [f4] 'my-switch-c-h)
