@@ -8,9 +8,6 @@
 (global-set-key [f10]  'compile )
 (global-set-key [f11]  'previous-error )
 (global-set-key [f12]  'next-error )
-(set-default-font "fixed")
-(set-cursor-color "white")
-(set-mouse-color "white")
 (which-func-mode t)
 
 (if (fboundp 'tool-bar-mode)
@@ -73,7 +70,9 @@
 (setq load-path (cons (expand-file-name "~andoma/dotfiles/emacs.d") load-path))
 (require 'c-style)
 (require 'go-mode)
-
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-taylor)
 
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-modifier nil
@@ -97,14 +96,6 @@
                    (inline-open          . 2)
                    (innamespace          . 0)
                    ))))
-(when (display-graphic-p)
-  (custom-set-faces
-   ;; custom-set-faces was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
-  )
 
 
 ;; There's something similar (but fancier) in vc-git.el: vc-git-grep
