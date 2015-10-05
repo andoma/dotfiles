@@ -69,7 +69,6 @@
  '(tool-bar-mode nil))
 
 (setq load-path (cons (expand-file-name "~andoma/dotfiles/emacs.d") load-path))
-(require 'c-style)
 (require 'go-mode)
 (require 'color-theme)
 (color-theme-initialize)
