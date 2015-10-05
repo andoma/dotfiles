@@ -1,5 +1,6 @@
 [user]
-	name = Andreas Öman
+	name = Andreas Smas
+	email = andreas@lonelycoder.com
 [branch]
 	autosetuprebase = always
 [color]
