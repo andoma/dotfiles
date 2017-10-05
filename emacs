@@ -68,11 +68,16 @@
  '(load-home-init-file t t)
  '(tool-bar-mode nil))
 
-(setq load-path (cons (expand-file-name "~andoma/dotfiles/emacs.d") load-path))
+(setq load-path (cons (expand-file-name "~/dotfiles/emacs.d") load-path))
 (require 'go-mode)
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-taylor)
+
+(require 'rust-mode)
+(setq rust-format-on-save t)
+(setq exec-path (append exec-path '("~/.cargo/bin")))
+
 
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-modifier nil
