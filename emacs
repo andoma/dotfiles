@@ -104,7 +104,7 @@
 
 ;; --no-color, oddly enough, is required to allow emacs to colorize the output
 
-(defcustom git-grep-switches "--extended-regexp -I -n --ignore-case --no-color"
+(defcustom git-grep-switches "-I -n -F --no-color"
   "Switches to pass to `git grep'."
   :type 'string)
 
