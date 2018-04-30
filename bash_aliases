@@ -2,6 +2,11 @@ if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
    source /usr/local/etc/bash_completion.d/git-prompt.sh
 fi
 
-PATH="$HOME/.cargo/bin:$PATH"
+if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
+    . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+    . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+fi
+
+PATH="$HOME/.cargo/bin:$HOME/bin:$PATH"
 
 PS1="\u@\h:\w\$(__git_ps1) \$ "

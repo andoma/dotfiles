@@ -84,6 +84,9 @@
         mac-command-modifier 'meta
         x-select-enable-clipboard t
         default-input-method "MacOSX")
+
+  (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+
 )
 
 (c-add-style "myc++"
