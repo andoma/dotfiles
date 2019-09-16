@@ -36,6 +36,7 @@
 (setq auto-mode-alist (append '(("\\.gnus$" . lisp-mode)
 				("^[mM]akefile" . makefile-mode)
 				("\\.view$" . js-mode)
+				("\\.cu$" . c++-mode)
 				)
 			      auto-mode-alist))
 
@@ -105,6 +106,7 @@
                    (innamespace          . 0)
                    ))))
 
+(c-set-offset 'innamespace 0)
 
 ;; There's something similar (but fancier) in vc-git.el: vc-git-grep
 
