@@ -85,10 +85,11 @@
 (color-theme-initialize)
 (color-theme-taylor)
 
-(require 'rust-mode)
-(setq rust-format-on-save t)
-(setq exec-path (append exec-path '("~/.cargo/bin")))
+;;(require 'rust-mode)
+;;(setq rust-format-on-save t)
+;;(setq exec-path (append exec-path '("~/.cargo/bin")))
 
+(require 'scad-mode)
 
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-modifier nil
