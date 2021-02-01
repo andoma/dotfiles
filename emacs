@@ -6,7 +6,7 @@
 (package-initialize)
 
 (modify-frame-parameters nil '((wait-for-wm . nil)))
-
+(setq frame-background-mode 'dark)
 (global-set-key "\C-n" 'goto-line)
 (global-set-key "\C-b" 'dabbrev-expand)
 (global-set-key [end]  'end-of-buffer )
