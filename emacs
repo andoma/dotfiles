@@ -116,6 +116,26 @@
                    (innamespace          . 0)
                    ))))
 
+
+(c-add-style "llvm"
+         '((c-basic-offset . 4)
+           (c-comment-only-line-offset . 0)
+           (c-hanging-braces-alist . ((substatement-open before after)))
+           (c-offsets-alist . ((topmost-intro        . 0)
+                   (topmost-intro-cont   . 0)
+                   (substatement         . 4)
+                   (substatement-open    . 0)
+                   (statement-case-open  . 4)
+                   (statement-cont       . 4)
+                   (access-label         . -4)
+                   (inclass              . 4)
+                   (inline-open          . 4)
+                   (innamespace          . 0)
+                   (inlambda             . 0)
+                   ))))
+
+
+
 (c-set-offset 'innamespace 0)
 
 ;; There's something similar (but fancier) in vc-git.el: vc-git-grep
