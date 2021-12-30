@@ -11,6 +11,6 @@ if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-comple
     . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 fi
 
-PATH="$HOME/.cargo/bin:$HOME/bin:$PATH"
+PATH="$HOME/bin:$PATH"
 
 PS1="\u@\h:\w\$(__git_ps1) \$ "
