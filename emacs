@@ -21,9 +21,9 @@
 (set-face-foreground 'font-lock-comment-face "#fc0")
 
 ;; Interactively do things.
-(ido-mode 1)
-(ido-everywhere)
-(setq ido-enable-flex-matching t)
+;;(ido-mode 1)
+;;(ido-everywhere)
+;;(setq ido-enable-flex-matching t)
 
 ;; Scroll behavour
 (setq scroll-step 1)
@@ -45,7 +45,7 @@
 (setq-default tab-width 4)
 
 ;; Indentation setting for various languages.
-(setq c-basic-offset 4)
+(setq c-basic-offset 2)
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
 
@@ -117,6 +117,7 @@
 (global-set-key [f10]  'compile )
 (global-set-key [f11]  'previous-error )
 (global-set-key [f12]  'next-error )
+(global-set-key "\C-n" 'goto-line )
 
 ;; Clang-format stuff
 (require 'clang-format+)
@@ -124,9 +125,9 @@
 (add-hook 'c-mode-common-hook #'clang-format+-mode)
 
 ;; Projectile
-(require 'projectile)
-(projectile-mode +1)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;;(require 'projectile)
+;;(projectile-mode +1)
+;;(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; Start server.
 (require 'server)
