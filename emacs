@@ -124,6 +124,30 @@
 (setq clang-format-style "file")
 (add-hook 'c-mode-common-hook #'clang-format+-mode)
 
+
+
+(c-add-style "myc++"
+         '((c-basic-offset . 4)
+           (c-comment-only-line-offset . 0)
+           (c-hanging-braces-alist . ((substatement-open before after)))
+           (c-offsets-alist . ((topmost-intro        . 0)
+                   (topmost-intro-cont   . 0)
+                   (substatement         . 4)
+                   (substatement-open    . 0)
+                   (statement-case-open  . 4)
+                   (statement-cont       . 4)
+                   (access-label         . -4)
+                   (inclass              . 4)
+                   (inline-open          . 4)
+                   (innamespace          . 0)
+                   (inlambda             . 0)
+                   ))))
+
+(defun my-c++-mode-hook ()
+  (c-set-style "myc++"))
+
+(add-hook 'c++-mode-hook 'my-c++-mode-hook)
+
 ;; Projectile
 ;;(require 'projectile)
 ;;(projectile-mode +1)
