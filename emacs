@@ -10,6 +10,15 @@
 (setq inhibit-startup-screen t)
 (column-number-mode)
 
+ ;; mac specific settings
+(when (eq system-type 'darwin)
+  (setq mac-option-modifier nil
+        mac-command-modifier 'meta
+        x-select-enable-clipboard t
+        default-input-method "MacOSX")
+  (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin:/opt/homebrew/bin/"))
+  )
+
 ;; Theme.
 (load-theme 'wombat)
 (set-face-background 'default "#111")
