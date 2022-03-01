@@ -79,7 +79,7 @@
 (setq custom-file (concat user-emacs-directory "custom.el"))
 
 ;; Install packages.
-(setq package-list '(markdown-mode paredit rainbow-delimiters clang-format+ projectile))
+(setq package-list '(markdown-mode paredit rainbow-delimiters clang-format+ projectile scad-mode))
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
